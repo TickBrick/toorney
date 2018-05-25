@@ -1,0 +1,25 @@
+
+<ion-view title="Login" hide-nav-bar="true" id="page18" style="background-color:#222E40;">
+  <ion-content padding="true" class="manual-ios-statusbar-padding" scroll="true">
+    <div id="login-container3" class="backgroundclr center Absolute-Center">
+      <div>
+        <img src="../img/0Bfglge7RZ2VrgaDLS6z_logo2.png" style="display: block; width: 70%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <h3 id="login-heading2" style="color:#D2D9DF;text-align:center;">Log In</h3>
+      <div class="spacer" style="height: 3px;"></div>
+      <form id="login-form1" class="list">
+        <label class="item item-input formStyleUsername" id="login-input1">
+          <i class="material-icons white">person</i><input type="text" placeholder="Username" ng-model="$root.UserSignUpData.UserName">
+        </label>
+        <div class="spacer" style="height: 3px;"></div>
+        <label class="item item-input formStyleUsername" id="login-input2">
+          <i class="material-icons white">lock</i><input type="password" placeholder="Password" ng-model="$root.UserSignUpData.Password">
+        </label>
+      </form>
+      <div ng-if="DisplayMessage" id="login-markdown17" style="text-align:center;" class="show-list-numbers-and-dots">-->
+        <p style="color:#D60707;">{{Message}}</p>
+        </div>
+      <a ng-click="Login()" id="login-button3" style="color:#2d3d54;border-radius:10px 10px 10px 10px;font-weight: bold" class="button button-positive button-block gradient">Log In</a>
+    </div>
+  </ion-content>
+</ion-view>

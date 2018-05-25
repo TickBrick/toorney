@@ -1,0 +1,24 @@
+
+<ion-view title="Balance: $ {{$root.UserData.Balance}}" id="page24" style="background-color:#7AA5E5;">
+  <ion-content padding="true" scroll="false" class="has-header">
+    <h3 id="profile-heading9" style="font-size:30px;color:#222E40;font-weight:bold;text-align:center;" class="">{{$root.UserData.UserName}}</h3>
+    <div id="profile-container8" class="backgroundclr Absolute-Center">
+      <div>
+        <img src="img/NTSnTa7eQNutAeBiR0KK_icon.png" style="display: block; width: 50%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <button id="profile-button12" style="font-weight:500;color:#87B7FF;border-radius:10px 10px 0px 0px;font-size:22px" class="button button-royal button-block icon-left ion-stats-bars">Statistics</button>
+      <ion-list id="profile-list1">
+        <ion-item class="item-icon-left calm" id="profile-list-item22">
+          <i class="icon ion-podium"></i>Played : 10</ion-item>
+        <ion-item class="item-icon-left calm" id="profile-list-item23">
+          <i class="icon ion-ribbon-a"></i>Won : 1</ion-item>
+        <ion-item class="item-icon-left calm" id="profile-list-item24">
+          <i class="icon ion-arrow-graph-up-right"></i>Win Rate : 10%</ion-item>
+      </ion-list>
+      <div class="center" style="max-width: 50%!important">
+        <button ng-click="SignOut()" id="ongoing" style="color:#87B7FF;font-weight:bold;" class="button button-royal button-block">Sign out</button>
+      </div>
+
+    </div>
+  </ion-content>
+</ion-view>

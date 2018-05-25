@@ -1,0 +1,43 @@
+
+<!--<ion-view title="<div><i class='icon ion-cash'></i> 750.00 $ </ion-item></div>"  id="page2" style="background-color:#E0F3F5;">-->
+  <!--<ion-content padding="true" class="manual-ios-statusbar-padding">-->
+    <!--<div class="spacer" style="height: 10px;"></div>-->
+    <!--<h2 id="home-heading9" style="color:#2FE6EC;text-align:center;" ng-click='AddDeposit()'>Upcoming Events</h2>-->
+    <!--<div id="home-markdown13" style="text-align:center;" class="show-list-numbers-and-dots">-->
+      <!--<hr>-->
+    <!--</div>-->
+    <!--<div id="home-container1" class="containerFull" ng-repeat="event in AllEvents">-->
+      <!--<div class="list card" id="home-card27" ng-click="ViewEvent(event._id)">-->
+        <!--<ion-item class="item-icon-left dark" id="home-list-item15" >-->
+          <!--<i class="icon ion-playstation"></i>{{event.Name}}</ion-item>-->
+        <!--<div class=" item item-image">-->
+          <!--<img src="../img/cc38kWAJTsy542fSETPD_maxresdefault.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">-->
+        <!--</div>-->
+        <!--<ion-item class="item-icon-left item-icon-right" id="home-list-item25">-->
+          <!--<i class="icon ion-ios-calendar-outline"></i>20 November @ 18:00-->
+          <!--<span class="item-note">Free</span>-->
+          <!--<i class="icon ion-social-usd"></i>-->
+        <!--</ion-item>-->
+      <!--</div>-->
+    <!--</div>-->
+  <!--</ion-content>-->
+<!--</ion-view>-->
+
+
+<ion-view title="" id="page2" style="background-color:#222E40;">
+  <ion-content padding="true" class="has-header">
+    <h4 id="home-heading7" style="color:#87B7FF;text-align:center;" class="headingBackground ul">Upcoming Events</h4>
+    <a ng-repeat="event in $root.AllEvents" class="list card" style="display:block;text-decoration:none;" ng-click="ViewEvent(event.Id)" id="home-card21">
+      <ion-item class="item-icon-left calm" id="home-list-item3">
+        <i class="icon ion-{{event.Platform}}"></i>{{event.Title}}</ion-item>
+      <div class=" item item-image">
+        <img src="../img/boXmrGF9QRGJkTSfZFm2_maxresdefault.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <ion-item class="item-icon-left calm" id="home-list-item5">
+        <i class="icon ion-calendar"></i>{{event.DateTime}}
+        <span ng-if="event.Price > 0" class="item-note">Entry: ${{event.Price}}</span>
+        <span ng-if="event.Price == 0" class="item-note">Entry: FREE</span>
+      </ion-item>
+    </a>
+  </ion-content>
+</ion-view>

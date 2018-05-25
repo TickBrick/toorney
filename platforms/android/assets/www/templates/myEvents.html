@@ -1,0 +1,38 @@
+
+<ion-view title="" id="page23" style="background-color:#7AA5E5;">
+  <ion-content padding="true" class="has-header">
+    <div id="myEventCopy-container9">
+      <div id="myEventCopy-button-bar2" class="button-bar">
+        <button ng-click="LoadOngoing()" id="ongoing" style="color:#87B7FF;font-weight:bold;" class="button button-royal button-block">Ongoing</button>
+        <button ng-click="LoadHistory()" id="history" style="color:#87B7FF;font-weight:bold;" class="button button-royal button-block">History</button>
+      </div>
+    </div>
+    <div ng-if="Toggled" id="myEventCopy-container10">
+      <a ng-repeat="oevent in ongoingEvents" ng-click="ViewEvent(oevent.Id)" class="list card" style="display:block;text-decoration:none;"  id="myEventCopy-card26">
+        <ion-item class="item-icon-left calm" id="myEventCopy-list-item14">
+          <i class="icon ion-{{oevent.Platform}}"></i>{{oevent.Title}}</ion-item>
+        <div class=" item item-image">
+          <img src="img/boXmrGF9QRGJkTSfZFm2_maxresdefault.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <ion-item class="item-icon-left item-icon-right calm" id="myEventCopy-list-item15">
+          <i class="icon ion-calendar"></i>{{oevent.DateTime}}
+          <i class="icon ion-android-clipboard"></i>
+        </ion-item>
+      </a>
+    </div>
+
+    <div ng-if="!Toggled" id="myEventCopy-container11">
+      <a ng-repeat="hevent in historyEvents" class="list card" style="display:block;text-decoration:none;" ng-click="ViewEvent(hevent.Id)" id="myEventCopy-card25">
+        <ion-item class="item-icon-left calm" id="myEventCopy-list-item18">
+          <i class="icon ion-{{hevent.Platform}}"></i>{{hevent.Title}}</ion-item>
+        <div class=" item item-image">
+          <img src="img/boXmrGF9QRGJkTSfZFm2_maxresdefault.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <ion-item class="item-icon-left item-icon-right calm" id="myEventCopy-list-item16">
+          <i class="icon ion-calendar"></i>{{hevent.DateTime}}
+          <i class="icon ion-android-clipboard"></i>
+        </ion-item>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

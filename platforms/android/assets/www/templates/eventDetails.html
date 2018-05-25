@@ -1,0 +1,30 @@
+
+<ion-view title="" id="page26" style="background-color:#222E40;">
+  <ion-nav-buttons side="left">
+    <a ng-click="goBack()" class="button button-icon icon ion-ios-arrow-back"></a>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <div id="eventdetails-container12" class="">
+      <a  class="list card" style="display:block;text-decoration:none;" id="eventdetails-card212">
+        <ion-item class="item-icon-left calm" id="eventdetails-list-item29">
+          <i class="icon ion-{{currentEvent.Platform}}"></i>{{currentEvent.Title}}</ion-item>
+        <div class=" item item-image">
+          <img src="../img/boXmrGF9QRGJkTSfZFm2_maxresdefault.jpg" style="display: block; width: 100%; height: auto; margin-left: auto; margin-right: auto;">
+        </div>
+        <div id="eventdetails-container11" class="Absolute-CenterNoMargin creator-container"></div>
+        <ion-item class="item-icon-left calm" id="eventdetails-list-item30">
+          <i class="icon ion-calendar"></i> {{currentEvent.DateTime}}</ion-item>
+        <div id="eventdetails-container14" class="center">
+          <div id="eventdetails-button-bar3" class="button-bar">
+            <a ng-click="ViewEventSchedule()" id="eventdetails-button28" style="color:#D2D9DF;border-radius:10px 1px 1px 10px;" class="button button-royal button-block gradient">SCHEDULE</a>
+            <button id="eventdetails-button30" style="color:#D2D9DF;border-radius:0px 10px 10px 0px;" class="button button-positive button-block gradient">{{currentEvent.JoinUsers}} JOINED</button>
+          </div>
+        </div>
+        <button id="eventdetails-button32" style="color:#FFFFFF;border-radius:0px 0px 0px 0px;" class="button button-royal button-block icon-left ion-android-clipboard gradient">RULES</button>
+        <button ng-click="JoinEvent()" ng-if="!UserJoined" id="eventdetails-button33" style="color:#FFFFFF;border-radius:0px 0px 0px 0px;" class="button button-royal button-block icon-left ion-android-add gradient">JOIN EVENT</button>
+        <button ng-if="UserJoined" id="eventdetails-button34" ng-disabled="true" style="color:#FFFFFF;border-radius:0px 0px 0px 0px;" class="button button-royal button-block icon-left ion-android-add gradient">JOINED</button>
+
+      </a>
+    </div>
+  </ion-content>
+</ion-view>
